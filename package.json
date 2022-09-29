@@ -9,10 +9,72 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^4.6.4",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.1",
+    "typescript": "^4.8.4",
     "vite": "^3.1.0"
   },
   "dependencies": {
     "phaser": "^3.55.2"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 80,
+    "trailingComma": "all",
+    "bracketSameLine": true,
+    "arrowParens": "avoid"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "@typescript-eslint/ban-ts-ignore": 0,
+      "@typescript-eslint/ban-ts-comment": 0,
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+      "@typescript-eslint/indent": 0,
+      "@typescript-eslint/member-delimiter-style": 0,
+      "@typescript-eslint/no-empty-interface": 0,
+      "@typescript-eslint/no-object-literal-type-assertion": 0,
+      "multiline-ternary": 0,
+      "no-undef": 0,
+      "no-unused-vars": 0,
+      "no-use-before-define": "off",
+      "space-before-function-paren": 0,
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "@typescript-eslint/no-var-requires": "warn",
+      "@typescript-eslint/no-empty-function": "warn"
+    }
   }
 }

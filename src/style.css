@@ -1,0 +1,23 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-console {
+  position: absolute;
+  width: 1338px;
+}
+
+#phaser-game-container {
+  z-index: 10;
+  margin-bottom: 10px;
+}
